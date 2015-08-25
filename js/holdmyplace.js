@@ -1,7 +1,9 @@
  /**
 * Easy Place Holder For all browser Tested on IE8 
 * by Hakan Hurriyet <aysanhakan@gmail.com>
-*/		
+*/	
+
+/* IT WILL BE CHANGED SOON ,PLS DONT USE IT FOR A WHILE*/	
 
     $('[placeholder]').focus(function() {
   				var input = $(this);
