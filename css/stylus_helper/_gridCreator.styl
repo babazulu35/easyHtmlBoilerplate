@@ -1,0 +1,20 @@
+/**
+* Grid Creation Tool
+* @package Stylus
+* @author Hakan Hürriyet <aysanhakan@gmail.com>
+*/
+@import "_siteConfig"
+@import "_mixins"
+@import "_variables"
+
+$container-size = $config-container
+$margin-size = $config-margin-size
+
+generate-grid(total-column,margin-size,container-size,divname)
+	$margin-left-size = px_to_per(margin-size,container-size)
+	$div-one-width = calc_div_size(total-column,$margin-left-size)
+	$div-one-width-second = calc_div_size(total-column,$margin-left-size)
+	for n,x in 1..(total-column)
+		.{divname}-{x+1}-on-{total-column}
+			width unit(round($div-one-width,2),'%')
+		$div-one-width = ($div-one-width + $div-one-width-second) + $margin-left-size

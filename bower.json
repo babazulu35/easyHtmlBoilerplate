@@ -1,0 +1,26 @@
+{
+  "name": "myEasyBoilerPlate",
+  "version": "0.0.1",
+  "description": "Easy Css and Html Boilerplate",
+  "main": "index.html",
+  "keywords": [
+    "Css",
+    "Boilerplate",
+    "Html",
+    "Stylus"
+  ],
+  "authors": [
+    "Hakan Hurriyet <aysanhakan@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery-1.11.3": "http://code.jquery.com/jquery-1.11.3.js"
+  }
+}

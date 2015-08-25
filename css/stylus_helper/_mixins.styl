@@ -1,0 +1,35 @@
+/**
+* Basic Mixins
+* @package Stylus
+* @author Hakan Hürriyet <aysanhakan@gmail.com>
+*/
+
+border-radius(n)
+	-webkit-border-radius n
+	-moz-border-radius n
+	border-radius n
+
+support-for-ie ?= true
+opacity(n)
+	opacity n
+	-moz-opacity n
+	-khtml-opacity n
+	if support-for-ie
+		filter unquote('progid:DXImageTransform.Microsoft.Alpha(Opacity=' + round(n * 100) + ')')
+		filter unquote('alpha(opacity=' + round(n * 100) +')');	
+bg-size(value)
+	-webkit-background-size value				
+	-moz-background-size value				
+	-o-background-size value				
+	background-size value
+
+clear-list()
+	.clear
+		&:before
+		&:after
+		content ""
+		display table
+	zoom 1
+	.clear
+		&:after
+		clear both							
