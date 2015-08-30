@@ -13,7 +13,14 @@
 /*#######################################
 # General Options
 ########################################*/	
-
+.clear-all
+	&:after
+	&:before
+		content ""
+		display table
+	zoom 1 // for old browsers
+	&:after
+		clear both	
 
 
 /*#######################################
